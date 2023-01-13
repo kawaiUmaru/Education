@@ -1,0 +1,1588 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+
+// ロットカラー設定
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --light-color:#888;
+   --light-bg:#eee;
+   --black:#2c3e50;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
+
+
+// フォント設定
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+
+// 選択
+*::selection{
+    background-color: var(--main-color);
+    color:var(--white);
+}
+
+
+// Html 設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    ::-webkit-scrollbar{
+       width: 1 rem;
+       height: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: var(--main-color);
+    }
+}
+
+
+
+
+// Body 設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+body{
+    background-color: var(--light-bg);
+    // Side bar 入れるため
+    padding-left: 30rem;  
+
+    .dark{
+        --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#222;
+   --border:.1rem solid rgba(255,255,255,.2);
+
+    }
+}
+
+
+
+// setion設定mー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+section{
+    padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
+}
+
+
+
+*::selection{
+   background-color: var(--main-color);
+   color: #fff;
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+
+// headdingー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+.headding{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+    border-bottom: var(--border);
+    padding-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+
+
+// ---各種ボタンを設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+
+// inline-btn : 内線のボタン
+// .inline-option-btn　内線選択ボタン
+// .inline-delete-btn,　内線削除ボタン
+// .btn　普通ボタン
+// .delete-btn,　普通削除ボタン
+// .option-btn　普通選択ボタン
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,.option-btn,.inline-option-btn,
+.delete-btn,
+.option-btn{
+    border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+   :hover{
+    background-color: var(--black);
+    color:var(--white);
+   }
+
+}
+
+.btn,.inline-btn{
+    background-color: var(--main-color);
+    color: var(--white);
+
+}
+
+
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+
+}
+
+
+.inline-btn,
+.inline-option-btn{
+    background-color: var(--main-color);
+    display: inline-block;
+}
+
+.delete-btn,.inline-delete-btn{
+    background-color: red;
+
+    
+    }
+    
+
+
+.option-btn,.inline-delete-btn{
+    background-color: var(--orange);
+    color:var(--black);
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+}
+
+
+.flex-btn{
+    display: flex;
+    gap: 1rem;
+ }
+ 
+ a{
+    &:hover{
+       background-color: var(--black);
+       color:var(--white);
+    }
+ }
+ 
+
+// これからHeader 設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+
+// 検索アイコン非表示
+
+
+.header{
+    position: sticky;
+    top:0;left: 0;right: 0;
+    background-color: var(--white);
+    z-index: 1000;
+    border-radius: var(--border);
+    
+    .flex{
+        display: flex;
+        justify-content: space-between;
+       align-items: center;
+       position: relative;
+
+    
+
+    // Logoー－－－－－－－－－－－－－－－－－
+    /*#region Logo*/
+    .logo {
+        font-size: 2rem;
+        color:var(--main-color);
+        padding: 1rem 2rem;
+        &:hover{
+            
+            color:var(--white);
+        }
+
+    
+          
+
+        }
+    }
+    /*#endregion */
+
+
+
+    // 検索バーー－－－－－－－－－－－－－－－－
+    /*#region 検索バー*/
+    .search-form{
+        display: flex;  
+        background-color: var(--light-bg);
+        border-radius: 0.5rem;
+        padding: 1rem ;
+        width: 50rem;
+        display: flex;
+        gap: 2rem;
+        font-size: 1.8rem;
+        color: black;
+        
+        
+        // 入力バー
+
+       input{
+        width: 100%;
+        font-size: 1.5rem;
+        background-color: var(--light-bg);
+    
+       }
+
+
+         //    検索イコン
+       button{
+        font-size: 2rem;
+        color:var(--black);
+        padding: 1rem;
+        &:hover{
+            color:var(--main-color);
+        }
+        
+       }
+
+       
+
+    }
+    /*#endregion 検索バー*/
+
+
+    //アイコンー－－－－－－－－－－－－－－－－－
+    /*#region アイコン*/ 
+     .icons div{
+        font-size: 2rem;
+        background-color: var(--light-bg);
+        color:black;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        line-height: 4.5rem;
+        &:hover{
+            background-color: var(--black);
+            color: var(--white);
+        }  
+    }
+    /*#endregion*/ 
+
+
+    // プロフィールー－－－－－－－－－－－－－－
+    /*#region Profile*/ 
+    .profile{
+        position: absolute;
+        top:120%; right: 2rem;
+        background-color: var(--white);
+        border-radius: .5rem;
+        padding: 1.5rem;
+        text-align: center;
+        overflow: hidden;
+        transform-origin: top right;
+        transform: scale(0);
+        transition: .2s linear;
+        width: 30rem;
+
+        &.active{
+            transform: scale(1);
+
+        }
+
+        img{
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            
+        }
+
+        h3{
+            font-size: 2rem;
+
+        }
+    }
+
+
+     /*#endregionProfile*/ 
+}
+
+
+
+#search-btn{
+   display: none;
+}
+// これからFooter ー－－－－－－ー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－ー－
+.footer{
+    background-color: var(--black);
+    border-radius: 0.5rem;
+    color:var(--white);
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    a{
+        color:var(--white);
+        &:hover{
+           color:red;
+        }
+    }
+
+
+
+
+}
+
+
+
+// これからSide Bar デザインー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+
+.side-bar{
+    position: fixed;
+    top:0 ;right:0;left: 0;
+    width: 30rem;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    border-right: var(--black);
+    border-radius: 0.5rem;
+    z-index: 1000;
+    height: 100vh;
+    font-size: 1.5rem;
+    // Close side barー－－－－－－－－－－－
+    
+    #side-bar-close-btn{
+        position: absolute;
+        top:1rem;
+        right: 1.5rem;
+        background-color: var(--red);
+        color:var(--white);
+        width: 3rem;
+        height: 2.5rem;
+        text-align: center;
+        font-size: 2rem;
+        display: none;
+
+        &:hover{
+            background-color: var(--black);
+            color: var(--white);
+
+        }
+
+    }
+
+
+    // Profile ー－－－－－－－－－－－－－－
+    .profile{
+        padding: 3rem 2rem;
+        text-align: center;
+
+        h3{
+            font-size: 2rem;
+        }
+    }
+
+    // Nav Barー－－－－－－－－－－－－ー－
+
+    .nav-bar a {
+        display: block;
+        padding: 2rem;
+        font-size: 1.5rem;
+        color: var(--main-color);
+        font-weight: 600;
+
+
+        &:hover{
+            background-color: var(--light-color);
+            color:var(--white);
+            
+        }
+
+
+        i{
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            
+          
+        }
+
+        
+    }
+}
+
+
+// これからhome grid ー－－－－－－－－－－－ー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+.home-grid{
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,25rem);
+        justify-content: center;
+        align-items: flex-start;
+        gap:1.5rem;
+        font-size: 1.7rem;
+
+        .box{
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 0.5rem ;
+            width: 25rem;
+            
+
+            
+
+            .title{
+                font-size: 2rem;
+            }
+
+            .likes{
+                margin-top: 1rem;
+                font-size: 1.8rem;
+            }
+
+
+            .flex{
+                display: flex;
+                flex-wrap: wrap;
+                gap:1.5rem;
+                margin-top: 1.5rem;
+
+                a{
+                    background-color: var(--light-bg);
+                    border-radius: 0.5rem;
+                    color:var(--black);
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    &:hover{
+                        background-color: var(--black);
+                        color:var(--white);
+                    }
+
+                    i{
+                        font-size: 1.8rem;
+                        margin-right: 1rem;
+                    }  
+                }        
+            }
+           
+            
+        }
+    }
+    
+    
+}
+
+// これからHomeにて学習コース/学習コースページー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－ー－ー－－－－－－－－－－－－－－
+
+.course{
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        justify-content: center;
+        align-items: flex-start;
+        gap:1.5rem;
+        .box{
+            background-color:var(--white);
+            border-radius: var(--border);
+            padding: 2rem;
+
+            .tutor{
+                display: flex;
+                align-items: center;
+                gap:1.5rem;
+                margin-bottom: 2.5rems;
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                h3{
+                    font-size: 1.7rem;
+                    color:var(--black);
+                }
+            }
+
+            .thumb{
+
+                position: relative;
+                margin-top: 1.5rem;
+                img{
+                    width: 100%;
+                    height: 50%;
+                }
+
+                span{
+                    position:absolute;
+                    top: 1rem;
+                    left: 1.5rem;
+                    padding: 0.5rem 2rem;
+                    background-color: var(--light-bg);
+                    border-radius: 0.5rem;
+                    color:var(--black);
+                    text-align: center;
+                }
+                
+
+
+            }
+
+            h3{
+                font-size: 2rem;
+            }
+
+            a{
+                font-size: 1.5rem;
+            }
+
+
+            // View More course button
+
+            
+ 
+        }
+    }
+
+
+
+    // すべて学習コースボタン
+
+    .view-all-courses{
+        text-align: center;
+        margin-top: 2.5rem;
+
+    }
+}
+
+
+// これからAbout ページー－－－－－－－－－－－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－－－－－
+
+// Aboutページにてメイン内容のヘッダ
+.about{
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3rem;
+       
+
+       .image{
+        flex:  1 1 40rem;
+        img{
+            width: 100%;
+            height: 50rem;
+        }
+       }
+
+       .content{
+        flex: 1 1 40rem;
+
+
+        h3{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+
+        p{
+            font-size: 1.5rem;
+        }
+       }
+        
+
+    }
+    
+
+    a{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        align-items: flex-start;
+        justify-content: center;
+        gap:1.5rem;
+
+
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            gap:2rem;
+            align-items: center;
+            text-align:start;
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            i{
+                font-size: 4rem;
+                color: var(--main-color);
+            }
+
+            h3{
+                font-size:2rem ;
+            }
+
+            
+        }
+    }
+
+}
+
+    // 生徒のレビュー
+
+    .reviews{
+        .box-container{
+
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        align-items: flex-start;
+        justify-content: center;
+        gap:1.5rem;
+        margin-top: 3rem;
+
+        margin-bottom: 2rem;
+        
+
+        .box{
+
+            background-color: var(--white);
+            border: 0.5rem;
+            padding: 2rem;
+            font-size: 1.5rem;
+            
+
+
+            .student{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+                align-items: center;
+                gap:2rem;
+
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    object-fit: cover;
+                }
+
+
+                h3{
+                    font-size: 1.8rem;
+                }
+
+
+                .starts{
+                    color:#f39c12;
+                    
+                }
+            }
+        }
+
+        }
+
+        
+    }
+
+    
+
+    // これからTeacher ページー－－－－－－－－－－－－－－－－－－－－－－－－－－－ ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+    .teachers{
+        .search-tutor{
+            display: flex;
+            align-items: center;
+            gap:1.5rem;
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+
+            input{
+                width: 100%;
+                background: none;
+                cursor: pointer;
+                color: var(--black);
+                font-size: 1.8rem;
+            }
+
+            button{
+                font-size: 2rem;
+                background: none;
+                color:var(--black);
+
+                &:hover{
+                    color:var(--main-color);
+                }
+            }
+
+        }
+
+
+
+        .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+            align-items: flex-start;
+            justify-content: center;
+            gap:1.5rem;
+           
+           
+            .offer{
+                text-align: center;
+                color:black;
+                font-size: 1.6rem;
+               
+                h3{
+                    font-size: 2rem;
+                }
+
+            }
+
+            .box{
+                background-color: var(--white);
+                border-radius: 0.5rem;
+                padding: 2rem;
+                font-size: 1.6rem;
+               
+            
+
+                .tutor{
+                    display: flex;
+                    align-items: center;
+                    gap:1.5rem;
+                    margin-bottom: 1.5rem;
+                   
+
+                    img{
+                        height: 5rem;
+                        width: 5rem;
+                    }
+
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                span{
+                    color:var(--main-color);
+                }
+
+                
+            }
+           
+        }
+    }
+
+    // これからTeacher  Profileページー－－－－－－－－－－－－－－－－－－－－－－－ ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+
+    .teacher-profile{
+
+   
+    // プロフィール
+    .details{
+        padding: 2rem;
+        background-color: var(--white);
+        text-align: center;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+
+        img{
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        h3{
+            font-size: 1.8rem;
+        }
+
+
+    
+        
+    }
+
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap:1.5rem;
+        margin-top: 2rem;
+        background-color: var(--white);
+    
+        p{
+           flex: 1 1 20rem;
+           background-color: var(--light-bg);
+           border-radius: 0.5rem;
+           padding: 2rem;
+           font-size: 1.6rem;
+        
+        }
+
+        span{
+            color:var(--main-color);
+        }
+        
+
+
+    }
+
+}
+
+// 教師の学習コース-------- 
+.our-course{
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        justify-content: center;
+        align-items: flex-start;
+        gap:1.5rem;
+        margin-bottom: 2rem;
+
+
+        .box{
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: 2rem;
+
+            .thumb{
+                position: relative;
+                margin-top: 1.5rem;
+
+                img{
+                    width: 100%;
+                    height: 50%;
+                }
+                span{
+                    position:absolute;
+                    top:1rem;
+                    left: 1.5rem;
+                    padding: 0.5rem 2rem;
+                    background-color: var(--light-bg);
+                    border-radius: 0.5rem;
+                    color:var(--black);
+                    text-align: center;
+
+                }
+            
+            }
+            
+        }
+    }
+
+}
+
+
+
+
+// これからCotact ページ    ー－－－－－－－－－－－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+.Contact {
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:1.5rem;
+
+        .images{
+            flex: 1 1 50rem;
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+        form{
+            flex: 1 1 28rem;
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.6rem;
+           
+           
+
+            h3{
+                font-size: 2rem;
+                color:var(--black);
+                text-transform: capitalize;
+                margin-bottom: 1.5rem;
+            }
+
+            .box{
+                width: 100%;
+                background-color: var(--light-bg);
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+                margin: 1rem 0 ;
+                
+            }
+
+            textarea{
+                height: 20rem;
+                resize: none;
+            }
+            
+
+            
+        }
+
+    }
+
+
+    .box-container{
+      
+           display: grid;
+           grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+           justify-content: center;
+           align-items: flex-start;
+           gap:1.5rem;
+           font-size: 1.6rem;
+          
+           .box{
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            height: 20rem;
+
+            i{
+                font-size: 2rem;
+                color:var(--main-color);
+                margin-bottom: 1.2rem;
+            }
+
+            a{
+                display: block;
+                text-align: center;
+                margin-top: 1.5rem;
+
+                
+            }
+            
+           }
+           
+           
+        
+    }
+}
+
+
+
+// これからUser Profileー－－－－－－－－－－－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+
+.user-profile{
+
+    .info{
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        padding: 2rem;
+
+        .user{
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            img{
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                margin-bottom: 1.5rem;
+                object-fit: cover;
+            }
+        }
+
+
+
+
+    }
+
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap:1.5rem;
+        font-size: 1.5rem;
+
+        .box{
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            flex:1 1 25rem;
+            
+            .flex{
+                display: flex;
+                text-align: center;
+                gap:1.5rem;
+
+                i{
+                    font-size: 2rem;
+                    color:var(--white);
+                    background-color: var(--light-color);
+                    width: 4rem;
+                    height: 4rem;
+                    padding: 1rem;
+                }
+            }
+        }
+        
+
+            
+
+    }
+
+
+
+}
+
+
+
+// これからUser Update ページー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+
+.form-container{
+   min-height: calc(100vh - 20rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    form{
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        width: 50rem;
+
+        h3{
+            font-size: 2rem;
+            text-transform: capitalize;
+            color:var(--black);
+            text-align: center;
+
+        }
+
+        p{
+            font-size: 1.5rem;
+            color:var(--black);
+            text-align:left;
+            padding-top:1rem ;
+            
+        }
+        span{
+            color:var(--red);
+        }
+
+        .box{
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            padding: 1rem ;
+            width: 100%;
+            font-size: 1.5rem;
+            color:var(--black);
+            margin: 1rem 0;
+        }
+
+    }
+
+}
+
+
+// これから Playlist Page Main Contentー－－－－－－－－－－－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+
+// PlayList 概要ー－－－－－－－－－－－    
+.Playlist-Details{
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        background-color: var(--white);
+        justify-content: flex-end;
+        gap:3rem;
+
+        .column{
+            flex : 1 1 40rem;
+            font-size: 1.5rem;
+
+
+            .save-playlist{
+                margin-bottom: 1.5rem;
+                
+                button{
+                    background-color: var(--light-bg);
+                    border-radius: 0.5rem;
+                    padding: 1.5rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--black);
+                        color:var(--white);
+                        i{
+                            color:white;
+                        }
+
+                        span{
+                            color:var(--white);
+                        }
+                    }
+
+                    i{
+                        font-size: 2rem;
+                        color: var(--black);
+                        margin-right: 1rem;
+                    }
+
+                    span{
+                        font-size: 1.8rem;
+                        color:var(--light-color);
+                    }
+                }    
+            }
+
+
+
+            .tutor{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                
+
+                img{
+                    width: 7rem;
+                    height: 7rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .thumb{
+            position: relative;
+            
+            span{
+                position:absolute;
+                top:1rem;
+                left: 1rem;
+                background-color: var(--light-bg);
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem ;
+                color:var(--black);
+                text-align: center;
+            }
+
+
+            img{
+                width: 100%;
+                height: 30rem;
+                object-fit: cover;
+               border-radius: 0.5rem;
+            }
+        }
+    }
+}
+
+// Play List Video ー－－－－－－－－－－－
+.playlist-videos
+{
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        justify-content: center;
+        align-items: flex-start;
+        gap:1.5rem;
+
+        .box{
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            position: relative;
+            &:hover{
+                i{
+                    display: flex;
+                }
+
+                h3{
+                    color:var(--main-color);
+                }
+            }
+
+
+
+
+            i{
+                position:absolute;
+                top:2rem;
+                left: 2rem;
+                right:2rem;
+                height: 20rem;
+                font-size: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                display: none;
+               
+            }
+
+            img{
+                width: 100%;
+                height: 20rem;
+                object-fit: cover;
+                border-radius: 0.5rem;
+            }
+
+            h3{
+                font-size: 2rem;
+                color:black;
+            }
+
+        }
+    }
+}
+               
+
+
+// これから Watch Video Page Main Content ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+// video ー－－－－－－－－－－－
+.watch-video{
+    .video-container{
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        
+        .videos{
+            position: relative;
+            margin-bottom: 1.5rem;
+
+            video{
+                border-radius: 0.5rem;
+                width: 100%;
+                object-fit: contain;
+                background-color: #000;
+
+            }
+
+        }
+
+
+        h3{
+            font-size: 2rem;
+            color: var(--black);
+            margin-top: 1.5rem;
+        }
+
+        .Info{
+            display: flex;
+            flex-wrap: wrap;
+            gap:3rem;
+            margin-bottom: 1.5rem;
+            padding: 2rem;
+            border-bottom: 1px solid ;
+           
+
+            i{
+                font-size: 2rem;
+                color:var(--main-color);
+
+            }
+
+            span{
+                font-size: 1.7rem;
+                color:var(--light-color);
+            }
+
+        }
+
+        .tutor{
+            display: flex;
+            gap:2rem;
+            padding: 2rem;
+            
+            
+            img{
+                height: 7rem;
+                width: 7rem;
+                object-fit: cover;
+                border-radius: 0.5rem;
+            }
+
+            h3{
+                font-size: 2rem;
+                color: var(--black);
+            }
+
+            p{
+                font-size: 1.6rem;
+                color:var(--black);
+            }
+           
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap:1.5rem;
+            margin-bottom: 1.5rem;
+            button{
+               background-color: var(--light-bg);
+               border-radius: 0.5rem;
+               padding: 1rem;
+
+               &:hover{
+                background-color: var(--black);
+                i{
+                    color: var(--white);
+                }
+                span{
+                    color:white;
+                }
+
+
+               }
+
+               i{
+                font-size: 2rem;
+                color:var(--black);
+                margin-right: 1rem;
+               }
+               span{
+                font-size: 1.7rem;
+               }
+               
+            }
+
+
+        }
+
+        // 説明内容
+
+        p{
+            font-size: 1.7rem;
+            color:var(--black);
+        }
+
+
+    }
+
+}
+
+
+// コメントー－－－－－－－－－－－－－－－－－－－－
+.watch-video-comment{
+    .add-comment{
+        background-color: var(--white);
+        color:black;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        textarea{
+            background: var(--light-bg);
+            border-radius: 0.5rem;
+            width: 100%;
+            height: 20rem;resize: none;
+            padding: 1.5rem;
+            margin: 0.5rem 0;
+            font-size: 1.7rem;
+            color:black;
+
+            
+        }
+        
+
+    }
+}
+
+
+// これから User Comment
+.user-comment{
+    .box-container{
+        display: grid;
+        gap:2.5rem;
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        padding: 2rem;
+
+
+        .box{
+
+            background: var(--light-bg);
+
+            .user{
+                display: flex;
+                gap:3rem;
+                padding: 2rem;
+                img{
+                    width: 7rem;
+                    height: 7rem;
+                    object-fit: cover;
+                    background-color: var(--light-color);
+                    border-radius: 0.5rem;
+
+                }
+                
+
+            }
+
+            .comment-box{
+                background-color:var(--light-bg);
+                border: 1px solid;
+                border-radius: 0.5rem;
+                height: 15rem;
+                padding: 2rem;
+                font-size: 1.6rem;
+                color:black;
+                padding: 1rem 1.5rem;
+                margin: 0.5rem 0;
+                white-space: pre-line;
+                position: relative;
+                z-index: 0;
+
+            }
+
+            h3{
+                font-size: 1.8rem;
+                color:var(--black);
+
+            }
+
+            p{
+                font-size: 1.5rem;
+            }
+
+            
+            
+        }
+
+    }
+}
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+// Media 設定ー－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－
+@media(max-width:1200px){
+
+    body{
+        padding-left: 0;
+
+    }
+
+    .side-bar {
+        transition: 0.3s linear;
+        left: -30rem;//画面を小さくしたらside-bar非表示
+        &.active{
+            left: 0;  //Menuボタンをクリックしたら,Side-bar は元の位置に戻す。すなわち表示する
+            box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
+        }
+
+        #side-bar-close-btn{
+            display: inline-block;
+        }
+    }
+
+}
+
+@media(max-width :991px){
+    html{
+        font-size: 55%;
+    }
+    
+    
+}
+
+@media(max-width:768px){
+    #search-btn{
+        display: inline-block;
+    }
+
+    .header .flex .search-form{
+        position:absolute;
+        top:99%;left: 0;right: 0;
+        width: auto;
+        border-radius: 0.5rem;
+        border-top: var(--border);
+        border-bottom: var(--border); 
+        background-color: var(--white);
+        padding: 1rem 2rem;
+        break-before: always;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.2s linear;
+        input{
+            background-color: var(--white);
+        }
+
+        button{
+            background-color: var(--white);
+        }
+    
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+    
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .home-grid .box-container{
+        grid-area: 1fr;
+    }
+}

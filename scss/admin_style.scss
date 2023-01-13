@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+
+// ロットカラー設定
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --light-color:#888;
+   --light-bg:#eee;
+   --black:#2c3e50;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
+
+
+// フォント設定
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+
+// 選択
+*::selection{
+    background-color: var(--main-color);
+}
+    *::selection{
+   background-color: var(--main-color);
+   color: #fff;
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+// Html 設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    ::-webkit-scrollbar{
+       width: 1 rem;
+       height: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: var(--main-color);
+    }
+}
+
+// Body 設定ー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+body{
+    background-color: var(--light-bg);
+    // Side bar 入れるため
+    padding-left: 30rem;  
+
+    .dark{
+        --light-color:#aaa;
+        --light-bg:#333;
+        --black:#fff;
+        --white:#222;
+        --border:.1rem solid rgba(255,255,255,.2);
+
+    }
+}
+
+
+
+// これからheaderー－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+.header{
+    position: sticky;
+    top:0;left: 0;right: 0;
+    background-color: var(--white);
+    z-index: 1000;
+    border-radius: var(--border);
+    
+    .flex{
+        display: flex;
+        justify-content: space-between;
+       align-items: center;
+       position: relative;
+
+    
+
+    // Logoー－－－－－－－－－－－－－－－－－
+    /*#region Logo*/
+    .logo {
+        font-size: 2rem;
+        color:var(--main-color);
+        padding: 1rem 2rem;
+        &:hover{
+            
+            color:var(--white);
+        }
+
+    
+          
+
+        }
+    }
+    /*#endregion */
+
+
+
+    // 検索バーー－－－－－－－－－－－－－－－－
+    /*#region 検索バー*/
+    .search-form{
+        display: flex;  
+        background-color: var(--light-bg);
+        border-radius: 0.5rem;
+        padding: 1rem ;
+        width: 50rem;
+        display: flex;
+        gap: 2rem;
+        font-size: 1.8rem;
+        color: black;
+        
+        
+        // 入力バー
+
+       input{
+        width: 100%;
+        font-size: 1.5rem;
+        background-color: var(--light-bg);
+    
+       }
+
+
+         //    検索イコン
+       button{
+        font-size: 2rem;
+        color:var(--black);
+        padding: 1rem;
+        &:hover{
+            color:var(--main-color);
+        }
+        
+       }
+
+       
+
+    }
+    /*#endregion 検索バー*/
+
+
+    //アイコンー－－－－－－－－－－－－－－－－－
+    /*#region アイコン*/ 
+     .icons div{
+        font-size: 2rem;
+        background-color: var(--light-bg);
+        color:black;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        line-height: 4.5rem;
+        &:hover{
+            background-color: var(--black);
+            color: var(--white);
+        }  
+    }
+    /*#endregion*/ 
+
+
+    // プロフィールー－－－－－－－－－－－－－－
+    /*#region Profile*/ 
+    .profile{
+        position: absolute;
+        top:120%; right: 2rem;
+        background-color: var(--white);
+        border-radius: .5rem;
+        padding: 1.5rem;
+        text-align: center;
+        overflow: hidden;
+        transform-origin: top right;
+        transform: scale(0);
+        transition: .2s linear;
+        width: 30rem;
+
+        &.active{
+            transform: scale(1);
+
+        }
+
+        img{
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            
+        }
+
+        h3{
+            font-size: 2rem;
+
+        }
+    }
+
+
+     /*#endregionProfile*/ 
+}
+
+    

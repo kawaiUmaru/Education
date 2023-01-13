@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザプロフィール</title>
+    <!-- front awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- customer css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- これからヘッダー－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+    <header class="header">
+        <section class="flex">
+
+
+            <!-- Logo -->
+            <a href="Home.html" class="logo">Education</a>
+
+
+            <!-- 検索バー -->
+            <form action="" class="search-form">
+
+                <input type="text" name="search-box" placeholder="サイト内検索" required maxlength="100">
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+
+            <!-- アイコン -->
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+
+            <!-- Profile -->
+            <div class="profile">
+                <img src="images/pic-1.jpg" alt="">
+                <h3>大分　慎太郎</h3>
+                <span>学生</span>
+                <a href="Profile.html" class="btn">プロフィール見る</a>
+
+
+                <div class="flex-btn">
+                    <a href="Login.html" class="option-btn">Login</a>
+                    <a href="Register.html" class="option-btn">登録</a>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+
+    </header>
+
+    <!-- Side Bar Profileー－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+
+    <div class="side-bar">
+        <!-- side bar close -->
+        <div id="side-bar-close-btn">
+            <i class="fas fa-times"></i>
+
+        </div>
+
+
+
+
+        <!-- プロプロフィール -->
+        <div class="profile">
+            <img src="images/pic-1.jpg" alt="">
+            <h3>大分　慎太郎</h3>
+            <span>学生</span>
+            <a href="Profile.html" class="btn">プロフィール見る</a>
+
+
+            <div class="flex-btn">
+                <a href="Login.html" class="option-btn">Login</a>
+                <a href="Register.html" class="option-btn">登録</a>
+            </div>
+
+        </div>
+
+        <!-- Nav Bar -->
+        <div class="nav-bar">
+            <a href="Home.html"><i class="fas fa-home"></i><span>ホーム</span></a>
+            <a href="AboutUs.html"><i class="fas fa-question"></i><span>私たちについて</span></a>
+            <a href="Courses.html"><i class="fas fa-graduation-cap"></i><span>学習コース</span></a>
+            <a href="Teachers.html"><i class="fas fa-chalkboard-user"></i><span>教師</span></a>
+            <a href="Contact.html"><i class="fas fa-headset"></i><span>連絡</span></a>
+
+        </div>
+        </section>
+    </div>
+
+
+    <!-- これから Watch Videp Main Contentー－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+
+    <section class="watch-video">
+
+
+        <div class="video-container">
+
+            <!-- Video -->
+            <div class="videos">
+                <video src="images/vid-1.mp4" controls poster="images/post-1-1.png" id="video"></video>
+
+            </div>
+
+
+
+            <!-- Title -->
+            <h3>complete HTML tutorial (part1)</h3>
+
+
+
+            <!-- Info -->
+            <div class="Info">
+                <p class="date"><i class="fas fa-calendar"></i> <span>2022-12-2</span></p>
+                <p class="date"><i class="fas fa-heart"></i><span> 44 likes</span></p>
+
+            </div>
+
+            <!-- 教師 -->
+            <div class="tutor">
+                <img src="images/pic-2.jpg" alt="">
+                <div class="">
+                    <h3> John Deo</h3>
+                    <p>開発</p>
+                </div>
+
+            </div>
+
+
+            <!-- 教師Post コメント -->
+
+            <form action="" method="post" class="flex">
+                <a href="Playlist.html" class="inline-btn">View Playlist</a>
+                <button><i class="fas fa-heart"></i><span>likes</span></button>
+            </form>
+
+            <p>WEBプログラミングを学習するにあたって、ほとんどの人がまず最初に学習するのがHTMLです。この記事では、そんなプログラミング初心者の人でもHTMLが理解できるよう、
+                難しい専門用語を使わずに、わかりやすい画像や具体例を使って解説していきます。
+                最後には、自分でHTMLを記述してブラウザに表示させるというHTML実践の機会もご用意しました。
+                これを読み終えた頃には、HTMLとは？という疑問は解消され、簡単なHTMLを記述できるようになっているでしょう。ぜひ最後までお読みください！</p>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- これから Watch Page Main Content (Comment)  -->
+
+    <section class="watch-video-comment">
+        <h1 class="headding">5 Comment</h1>
+
+        <form action="" class="add-comment">
+            <h3>コメント追加</h3>
+
+            <textarea name="comment_box" id="" cols="30" rows="10" required placeholder="Your Comment"
+                maxlength="1000"></textarea>
+            <input type="submit" value="追加" class="inline-btn" name="add_comment">
+        </form>
+
+    </section>
+
+
+    <!-- これかたUser Comment -->
+    <section class="user-comment">
+        <h1 class="headding"> User Comment</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="user">
+                    <img src="images/pic-3.jpg" alt="">
+                    <div>
+                        <h3> 本田　慎太郎</h3>
+                        <p>2022-12-2</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    先生が親切だし,説明がすごくわかりやすいです。授業を受けてから，既に自分のWeb デザインを作成することができる。ぜひうけてください。超おすすめです。
+
+
+                </div>
+
+
+                <form action="" class="flex-btn">
+                    <input type="submit" name="edit_comment" id="" value="修正" class="inline-option-btn">
+                    <input type="submit" name="delete_comment" id="" value="削除" class="inline-delete-btn">
+
+                </form>
+
+            </div>
+
+
+            <div class="box">
+                <div class="user">
+                    <img src="images/pic-4.jpg" alt="">
+                    <div>
+                        <h3> 本田　祐樹</h3>
+                        <p>2022-12-2</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    先生が親切だし,説明がすごくわかりやすいです。授業を受けてから，既に自分のWeb デザインを作成することができる。ぜひうけてください。超おすすめです。
+
+
+                </div>
+            </div>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- ー－－－－－－－－－－これからfooter－－－－ー－－－－－－－－－－－－－－ー－－－－－－－－－－－－－－ -->
+
+
+
+    <footer class=" footer">
+
+        <div class="InfoCompany">
+            <h2>合同会社シンセイ</h1>
+
+                <h3><i class="fas fa-tenge">870-0921</i> <span> 大分県大分市萩原4丁目9番65号</span></h3>
+
+                <div class="Phone">
+                    <h3>携帯番号: <a href="tel:097-504-3677">097-504-3677</a> </h3>
+                    <h3> FAX: <a href="tel:97-535-8666">097-535-8666</a> </h3>
+
+                </div>
+        </div>
+
+        <div class="copyright">
+
+            &copy;copyright @2022 by <span>合同会社シンセイ</span>　 all right register
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

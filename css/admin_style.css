@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --main-color:#8e44ad;
+  --red:#e74c3c;
+  --orange:#f39c12;
+  --light-color:#888;
+  --light-bg:#eee;
+  --black:#2c3e50;
+  --white:#fff;
+  --border:.1rem solid rgba(0,0,0,.2);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::-moz-selection {
+  background-color: var(--main-color);
+}
+
+*::selection {
+  background-color: var(--main-color);
+}
+
+*::-moz-selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html ::-webkit-scrollbar {
+  width: 1 rem;
+  height: 0.5rem;
+}
+html ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+body {
+  background-color: var(--light-bg);
+  padding-left: 30rem;
+}
+body .dark {
+  --light-color:#aaa;
+  --light-bg:#333;
+  --black:#fff;
+  --white:#222;
+  --border:.1rem solid rgba(255,255,255,.2);
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  z-index: 1000;
+  border-radius: var(--border);
+  /*#endregion */
+  /*#region 検索バー*/
+  /*#endregion 検索バー*/
+  /*#region アイコン*/
+  /*#endregion*/
+  /*#region Profile*/
+  /*#endregionProfile*/
+}
+.header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /*#region Logo*/
+}
+.header .flex .logo {
+  font-size: 2rem;
+  color: var(--main-color);
+  padding: 1rem 2rem;
+}
+.header .flex .logo:hover {
+  color: var(--white);
+}
+.header .search-form {
+  display: flex;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 50rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.8rem;
+  color: black;
+}
+.header .search-form input {
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: var(--light-bg);
+}
+.header .search-form button {
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem;
+}
+.header .search-form button:hover {
+  color: var(--main-color);
+}
+.header .icons div {
+  font-size: 2rem;
+  background-color: var(--light-bg);
+  color: black;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 4.5rem;
+}
+.header .icons div:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.header .profile {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: 0.2s linear;
+  width: 30rem;
+}
+.header .profile.active {
+  transform: scale(1);
+}
+.header .profile img {
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .profile h3 {
+  font-size: 2rem;
+}
